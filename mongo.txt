@@ -51,4 +51,4 @@ db.orders.find({date: {$lt: new Date('2016-01-01')}})
 db.orders.find({date: {$gt: new Date('2016-01-01')}})
 
 7. Find orders with lineItems that have a quantity that is less than 50, but greater than 5.
-db.orders.find({'lineItems.quantity':{$lt: 50}, 'lineItems.quantity':{$gt: 5}})
+db.orders.find({'lineItems.quantity':{$lt: 50, $gt: 5}})
